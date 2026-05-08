@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net462</TargetFramework>
+    <RootNamespace>IMSConsoleHost</RootNamespace>
+    <AssemblyName>IMSConsoleHost</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\Infor.IMSSampleApplication.Server\Infor.IMSSampleApplication.Server.csproj" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.SelfHost" Version="5.2.9" />
+    <PackageReference Include="MultipartDataMediaFormatter" Version="1.0.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+{
+  "messageId": "12345",
+  "timestamp": "2026-01-01T12:00:00Z",
+  "sender": "ACME_001",
+  "action": "UPLOAD"
+}

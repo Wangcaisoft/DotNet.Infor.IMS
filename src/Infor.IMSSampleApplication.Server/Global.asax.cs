@@ -1,0 +1,36 @@
+﻿/**
+ * ---Begin Copyright Notice--- Feb 4, 2021 11:52:46 AM
+ *
+ * NOTICE
+ *
+ * THIS SOFTWARE IS THE PROPERTY OF AND CONTAINS CONFIDENTIAL INFORMATION OF
+ * INFOR AND/OR ITS AFFILIATES OR SUBSIDIARIES AND SHALL NOT BE DISCLOSED
+ * WITHOUT PRIOR WRITTEN PERMISSION. LICENSED CUSTOMERS MAY COPY AND ADAPT THIS
+ * SOFTWARE FOR THEIR OWN USE IN ACCORDANCE WITH THE TERMS OF THEIR SOFTWARE
+ * LICENSE AGREEMENT. ALL OTHER RIGHTS RESERVED.
+ *
+ * (c) COPYRIGHT 2021 INFOR. ALL RIGHTS RESERVED. THE WORD AND DESIGN MARKS SET
+ * FORTH HEREIN ARE TRADEMARKS AND/OR REGISTERED TRADEMARKS OF INFOR AND/OR ITS
+ * AFFILIATES AND SUBSIDIARIES. ALL RIGHTS RESERVED. ALL OTHER TRADEMARKS LISTED
+ * HEREIN ARE THE PROPERTY OF THEIR RESPECTIVE OWNERS.
+ *
+ * ---End Copyright Notice---
+ */
+ 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Http;
+using System.Web.Routing;
+
+namespace IMSSampleApplication
+{
+    public class WebApiApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+        }
+    }
+}

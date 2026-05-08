@@ -1,0 +1,166 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "3.0.202009",
+    "title" : "IMS"
+  },
+  "basePath" : "/api/ion/messaging/service",
+  "tags" : [ ],
+  "paths" : {
+    "/versions" : {
+      "get" : {
+        "tags" : [ "IMS Messaging Service" ],
+        "summary" : "VERSIONS :: Gets IMS services supported versions",
+        "description" : "This method returns the list of supported versions of the IMS.",
+        "operationId" : "VERSIONS",
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "",
+            "examples" : {
+              "application/json" : {
+                "supportedVersions" : [ "v1", "v2", "v3" ]
+              }
+            },
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "404" : {
+            "description" : "Not Found"
+          },
+          "405" : {
+            "description" : "Method Not Allowed"
+          },
+          "406" : {
+            "description" : "Not Acceptable Response"
+          },
+          "500" : {
+            "description" : "Internal Server Error "
+          }
+        }
+      }
+    },
+    "/ping" : {
+      "get" : {
+        "tags" : [ "IMS Messaging Service" ],
+        "summary" : "PING :: Ping Service interface, checks whether the server is available or not.",
+        "description" : "This method returns the server availability status.",
+        "operationId" : "PING",
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "examples" : {
+              "application/json" : {
+                "status" : "OK",
+                "code" : 200
+              }
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "404" : {
+            "description" : "Not Found"
+          },
+          "405" : {
+            "description" : "Method Not Allowed"
+          },
+          "406" : {
+            "description" : "Not Acceptable Response"
+          },
+          "500" : {
+            "description" : "Internal Server Error ",
+            "examples" : {
+              "application/json" : {
+                "status" : "FAIL",
+                "code" : 540,
+                "errors" : "Infor IMS Internal Server Error"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v3/multipartMessage" : {
+      "post" : {
+        "tags" : [ "IMS Messaging Service v3" ],
+        "summary" : "MULTIPARTMESSAGE_V3 :: Publish message to ION via IMS",
+        "description" : "This method will be validating message request as per API specification and publish the message and returns whether the message is successfully published or not.",
+        "operationId" : "MULTIPARTMESSAGE_V3",
+        "consumes" : [ "multipart/form-data" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "logicalId",
+          "in" : "query",
+          "description" : "The From LogicalId as query parameter to specify from which application multipart message is being published",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "documentName",
+          "in" : "query",
+          "description" : "The document name as query parameter of multipart message that is being published",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "ParameterRequest",
+          "in" : "formData",
+          "description" : "Parameter Request File. The content type must be set to application/json. When selecting a file in this swagger, make sure that file has a '.json' extension\n Example: \n{\r\n  \"documentName\" : \"Sync.SalesOrder\",\r\n  \"messageId\" : \"message1\",\r\n  \"fromLogicalId\" : \"lid://infor.ims.imsap\",\r\n  \"toLogicalId\" : \"lid://default\",\r\n  \"encoding\" : \"NONE\",\r\n  \"characterSet\" : \"UTF-8\",\r\n  \"accountingEntity\" : \"ae1\",\r\n  \"location\" : \"loc123\",\r\n  \"documentId\" : \"sdafas\",\r\n  \"variationId\" : 1,\r\n  \"revisionId\" : \"123\",\r\n  \"batchId\" : \"infor.SSJE:1\",\r\n  \"batchSequence\" : 2,\r\n  \"batchSize\" : 1,\r\n  \"batchRevision\" : 1,\r\n  \"batchAbortIndicator\" : true,\r\n  \"instances\" : \"1\",\r\n  \"source\" : \"DB Connector\",\r\n  \"custom_property1\" : \"value1\",\r\n  \"custom_property2\" : \"value2\"\r\n}",
+          "required" : true,
+          "type" : "file",
+          "format" : "application/json"
+        }, {
+          "name" : "MessagePayload",
+          "in" : "formData",
+          "description" : "Message Payload File. The content type must be set to application/octet-stream. When selecting a file in this swagger, make sure that file has no extension, a '.bin' extension or any other extension which resolves to this content type.",
+          "required" : true,
+          "type" : "file",
+          "format" : "application/octet-stream"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "OK"
+          },
+          "400" : {
+            "description" : "Bad Request",
+            "examples" : {
+              "application/json" : {
+                "status" : "FAIL",
+                "code" : 419,
+                "errors" : "fromLogicalId is required"
+              }
+            }
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "404" : {
+            "description" : "Not Found"
+          },
+          "405" : {
+            "description" : "Method Not Allowed"
+          },
+          "406" : {
+            "description" : "Not Acceptable Response"
+          },
+          "412" : {
+            "description" : "Precondition Failed"
+          },
+          "415" : {
+            "description" : "Unsupported Media Type"
+          },
+          "500" : {
+            "description" : "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

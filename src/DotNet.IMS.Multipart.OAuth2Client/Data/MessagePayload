@@ -1,0 +1,115 @@
+<SyncSalesOrder>
+	<ApplicationArea>
+		<Sender>
+			<LogicalID>lid://infor.conpoint1.conpoint1</LogicalID>
+			<ComponentID>erp</ComponentID>
+			<ConfirmationCode>OnError</ConfirmationCode>
+		</Sender>
+		<CreationDateTime>2011-07-19T21:23:04Z</CreationDateTime>
+		<BODID>infor-nid:Infor:infor::SSO000025:?SalesOrder&amp;verb=Sync</BODID>
+	</ApplicationArea>
+	<DataArea>
+		<Sync>
+			<TenantID>Infor</TenantID>
+			<AccountingEntityID>infor</AccountingEntityID>
+			<LocationID>IN</LocationID>
+			<ActionCriteria>
+				<ActionExpression actionCode="Add"/>
+			</ActionCriteria>
+		</Sync>
+		<SalesOrder>
+			<SalesOrderHeader>
+				<DocumentID agencyRole="Supplier">
+					<ID accountingEntity="infor" lid="lid://infor.ln.nlbavwinttest1_441" 
+					variationID="1654">2</ID>
+				</DocumentID>
+				<AlternateDocumentID>
+					<ID></ID>
+				</AlternateDocumentID>
+				<LastModificationDateTime>2011-07-19T21:23:04Z</LastModificationDateTime>
+				<DocumentDateTime>2011-07-19T21:22:00Z</DocumentDateTime>
+				<Status>
+					<Code>Approved</Code>
+					<EffectiveDateTime>2011-07-19T21:22:00Z</EffectiveDateTime>
+					<ArchiveIndicator>false</ArchiveIndicator>
+				</Status>
+				<CustomerParty>
+					<PartyIDs>
+						<ID>WMC000003</ID>
+					</PartyIDs>
+					<Name>variant 6.1.3</Name>
+					<Location>		</Location>
+				</CustomerParty>
+				<SupplierParty>	</SupplierParty>
+				<ShipToParty></ShipToParty>
+				<ExtendedAmount currencyID="GBP">1000</ExtendedAmount>
+				<BillToParty></BillToParty>
+				<CarrierParty></CarrierParty>
+				<PayFromParty></PayFromParty>
+				<PaymentTerm></PaymentTerm>
+				<PaymentMethodCode/>
+				<BackOrderIndicator>true</BackOrderIndicator>
+				<UserArea>
+					<Property>
+						<NameValue name="ln.RateDeterminer" type="StringType">Document Date</NameValue>
+					</Property>
+					<Property>
+						<NameValue name="ln.Blocked" type="StringType">No</NameValue>
+					</Property>
+					<Property>
+						<NameValue name="ln.Canceled" type="StringType">No</NameValue>
+					</Property>
+					<Property>
+						<NameValue name="ln.OrderType" type="StringType">612</NameValue>
+					</Property>
+				</UserArea>
+				</SalesOrderHeader>
+			<SalesOrderLine>
+				<LineNumber>10</LineNumber>
+				<Note/>
+				<Status>
+					<Code>Open</Code>
+					<EffectiveDateTime>2011-07-19T21:23:05Z</EffectiveDateTime>
+					<ArchiveIndicator>false</ArchiveIndicator>
+				</Status>
+				<Item>
+					<ItemID>
+						<ID>ARPUR</ID>
+					</ItemID>		<Description>ar purchased item</Description>		</Item>
+				<Quantity unitCode="PCS">1</Quantity>
+				<UnitPrice>
+					<Amount currencyID="GBP">1000</Amount>
+					<PerQuantity unitCode="PCS">1</PerQuantity>
+				</UnitPrice>
+				<ShipToParty>		</ShipToParty>
+				<UserArea>
+					<Property>
+						<NameValue name="ln.SalesType" type="StringType">TRADE</NameValue>
+					</Property>
+					<Property>
+						<NameValue name="ln.Blocked" type="StringType">No</NameValue>
+					</Property>
+					<Property>
+						<NameValue name="ln.Canceled" type="StringType">No</NameValue>
+					</Property>
+				</UserArea>
+				<RushIndicator>false</RushIndicator>
+				<SelfBillingIndicator>false</SelfBillingIndicator>
+				<CarrierParty>
+					<PartyIDs>
+						<ID/>
+					</PartyIDs>
+				</CarrierParty>
+				<ShipFromParty>
+					<Location type="Warehouse">
+						<ID>W_ARWH1</ID>
+					</Location>
+				</ShipFromParty>
+				<FixedPriceItemIndicator>false</FixedPriceItemIndicator>
+				<ShippedQuantity unitCode="PCS">0</ShippedQuantity>
+				<UnitQuantityConversionFactor>1</UnitQuantityConversionFactor>
+				
+			</SalesOrderLine>
+		</SalesOrder>
+	</DataArea>
+</SyncSalesOrder>

@@ -1,0 +1,20 @@
+{
+  "fromLogicalId"		: "lid://infor.ims.imsviaionapi_cp",
+  "messageId"           : "someId",
+  "toLogicalId"		    : "lid://default",
+  "documentName"		: "Sync.SalesOrder",
+  "encoding"            : "DEFLATE",
+  "characterSet"        : "UTF-8",
+  "accountingEntity"	: "ae1",                                          
+  "location"			: "loc123",                                   
+  "documentId"			: "sdafas",                                  
+  "variationId"			: 1,                                                  
+  "revisionId"			: "123",                                         
+  "batchId"				: "infor.SSJE:1",                         
+  "batchSequence"		: 2,                                                 
+  "batchSize"			: 1,                                                  
+  "batchRevision"		: 1,                                                  
+  "batchAbortIndicator"	: true,
+  "custom_TwoIO" : "2",
+  "custom_OneIO" : "1"  
+}

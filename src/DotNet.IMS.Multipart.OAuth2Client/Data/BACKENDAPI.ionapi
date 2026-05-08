@@ -1,0 +1,16 @@
+{
+	"ti": "infor",
+	"cn": "BACKENDAPI",
+	"dt": "12",
+	"ci": "infor~rR6SEQgRZNGF3DvT5OV5q3G0xQfTdOQde8gVPZGkdY8",
+	"cs": "Iz_C9ccsoeosxXOk6KM5j-hbaRbYso8WirgXiZoNYqgBck0CMX0eRXYSYoIiobtlCYLJpVHWkh8ZG8HytJMwdQ",
+	"iu": "https://nlbavwionop1.infor.com:7443",
+	"pu": "https://nlbavwionop1.infor.com/InforIntSTS/",
+	"oa": "connect/authorize",
+	"ot": "connect/token",
+	"or": "connect/revocation",
+	"ev": "B1608786151",
+	"v": "1.0",
+	"saak": "infor#l31grJEaEaNNHHO83jaVH24GO6hB5Hds0QY4tKJrRhsTTr8uvWqsTKaWeJ-oqG3BsOFuL3rnViQnid4O7QrKCQ",
+	"sask": "9E696tTtdy-5nTK79Dxqb8zSn71Y_9SVyDxImdCZZWiF8HX6Psfivv36lb_9EGkh6VWi_2GRn0kxLNr-_Zs-BA"
+}
