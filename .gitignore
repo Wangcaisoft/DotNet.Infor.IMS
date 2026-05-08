@@ -416,3 +416,5 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+/src/DotNet.IMS.Multipart.OAuth2Client/Data/test.ionapi
+/src/DotNet.IMS.Multipart.OAuth2Client/Data/OA.ionapi
